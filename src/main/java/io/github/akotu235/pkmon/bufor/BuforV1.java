@@ -1,17 +1,18 @@
-package io.github.akotu235.pkmon;
+package io.github.akotu235.pkmon.bufor;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-class Bufor {
+public class BuforV1 implements Bufor {
     private final Queue<Integer> queue;
     private final int size;
 
-    public Bufor(int size) {
+    public BuforV1(int size) {
         this.size = size;
         this.queue = new LinkedList<>();
     }
 
+    @Override
     public synchronized void put(int i) {
         while (queue.size() == size) {
             try {
@@ -26,6 +27,7 @@ class Bufor {
         notifyAll();
     }
 
+    @Override
     public synchronized int get() {
         while (queue.isEmpty()) {
             try {

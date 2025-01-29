@@ -1,5 +1,7 @@
 package io.github.akotu235.pkmon;
 
+import io.github.akotu235.pkmon.bufor.Bufor;
+
 class Producent extends Thread {
     private final Bufor _buf;
 
