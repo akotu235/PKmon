@@ -4,14 +4,22 @@ import io.github.akotu235.pkmon.bufor.Bufor;
 
 class Konsument extends Thread {
     private final Bufor _buf;
+    private final int delay;
 
-    public Konsument(Bufor buf) {
+    public Konsument(Bufor buf, int delay) {
         this._buf = buf;
+        this.delay = delay;
     }
 
     public void run() {
         for (int i = 0; i < 100; ++i) {
             System.out.println("K <- " + _buf.get());
+            try {
+                sleep(delay);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                System.out.println("Wątek konsumenta został przerwany.");
+            }
         }
     }
 }
