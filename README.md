@@ -2,7 +2,7 @@
 
 ## Przegląd
 
-Projekt implementuje rozwiązanie klasycznego problemu producenta i konsumenta za pomocą monitorów w Javie. Symulacja ilustruje, jak producent i konsument współpracują w ograniczonym buforze, zapewniając synchronizację za pomocą metod `wait()` i `notifyAll()`. Celem projektu jest zrozumienie mechanizmów synchronizacji w programowaniu wielowątkowym.
+Projekt implementuje rozwiązanie klasycznego problemu producenta i konsumenta za pomocą monitorów oraz wersji opartej o `BlockingQueue` w Javie. Symulacja ilustruje, jak producent i konsument współpracują w ograniczonym buforze, zapewniając synchronizację za pomocą metod `wait()` i `notifyAll()` w jednej wersji oraz przy użyciu `BlockingQueue` w drugiej. Celem projektu jest zrozumienie mechanizmów synchronizacji w programowaniu wielowątkowym.
 
 ## Główne funkcje
 
@@ -14,9 +14,11 @@ Program implementuje klasyczny problem producenta i konsumenta, używając monit
 
 ## Struktura projektu
 
-- `Bufor` – Klasa implementująca monitor.
+- `Bufor` – Interfejs definiujący operacje bufora.
+- `BuforV1` – Klasa implementująca monitor.
+- `BuforV2` – Klasa implementująca bufor oparty o `BlockingQueue`.
 - `Producent` i `Konsument` – Klasy reprezentujące odpowiednie role w problemie.
-- `Main` – Klasa uruchamiająca program i konfigurująca symulację.
+- `PKmon` – Klasa uruchamiająca program i konfigurująca symulację.
 
 ## Wyniki
 
@@ -27,4 +29,5 @@ Pełne wyniki działania programu są dostępne w pliku:
 
 Szczegóły implementacji i analizy:
 
-- [Raport](report/report.md) – Rozwiązanie problemu producenta i konsumenta za pomocą monitorów.
+- [Raport 1](report/report.md) – Rozwiązanie problemu producenta i konsumenta za pomocą monitorów.
+- [Raport 2](report/report.md) – Rozwiązanie problemu producenta i konsumenta za pomocą mechanizmów Java Concurrency Utilities (JCU).
