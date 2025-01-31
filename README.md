@@ -30,4 +30,4 @@ Pełne wyniki działania programu są dostępne w pliku:
 Szczegóły implementacji i analizy:
 
 - [Raport 1](report/report.md) – Rozwiązanie problemu producenta i konsumenta za pomocą monitorów.
-- [Raport 2](report/report.md) – Rozwiązanie problemu producenta i konsumenta za pomocą mechanizmów Java Concurrency Utilities (JCU).
+- [Raport 2](https://github.com/akotu235/Tury/blob/master/report/report.md) – Rozwiązanie problemu producenta i konsumenta za pomocą mechanizmów Java Concurrency Utilities (JCU).
